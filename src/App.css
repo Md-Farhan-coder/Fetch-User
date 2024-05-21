@@ -15,9 +15,10 @@
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
-    height: 90vh;
+    height: fit-content;
+    min-height: 90vh;
     overflow-y: scroll;
-
+  
 }
 #sidebar::-webkit-scrollbar {
     display: none;
@@ -102,9 +103,7 @@ a.article:hover {
 .sidebar-item div {
     margin: 5px 0px;
 }
-.sidebar-img{
-  
-}
+
 .sidebar-img img{
     width: auto;
     height: 5rem;
@@ -115,17 +114,29 @@ a.article:hover {
 /* Card CSSSS */
 .main-container{
     display: grid!important;
-    grid-template-columns: repeat(10, auto); ;
+    grid-template-columns: repeat(10, 10vw); ;
     justify-content: center;
+    max-height: 100vh;
+    overflow-x: scroll;
 }
 .sidebar-container{
-position: fixed;
+/* position: fixed; */
+/* max-height: 100vh;
+overflow-y: scroll; */
 
+}
+.post-container::-webkit-scrollbar {
+    display: none;
+}
+.main-container::-webkit-scrollbar {
+    display: none;
 }
 .post-container{
     
     grid-column: 4/span 6 !important;
-   
+    max-height: 100vh;
+    overflow-y: scroll;
+ 
 
 }
 .card-container{
@@ -138,4 +149,13 @@ position: fixed;
 height: auto;
 margin: 20px;
 width: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-container{
+        display: grid!important;
+        grid-template-columns: repeat(10, 7rem); ;
+        justify-content: start;
+        overflow-y: scroll;
+    }
 }

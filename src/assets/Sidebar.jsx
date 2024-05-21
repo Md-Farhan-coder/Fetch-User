@@ -50,6 +50,7 @@ const Sidebar = ({ idParam }) => {
 				setVal(value);
                 setLoading(false);
 				console.log("use Statrevasl  :b   " + typeof(value));
+             
 			}
             else console.log("not matrched");
 		});
@@ -58,7 +59,7 @@ const Sidebar = ({ idParam }) => {
    {
 if(loading){
         return(
-            <nav id=" " style={{ display: display}}>
+            <nav id=" " >
         <div className=" d-flex justify-content-center align-items-center fs-2" id="sidebar">
            
   <span class="spinner-border spinner-border-sm m-4 fs-6"  style={{  width: "3rem", height: "3rem",}}></span>

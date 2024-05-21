@@ -17,7 +17,7 @@ const Cards = ({ index,name, avatar, jobtitle,id ,cardClick}) => {
 							<div className="d-flex justify-content-start">
 								<h3>{index} : {name}</h3>
 							</div>
-							<div>Job Title : {jobtitle}</div>
+							<div className="text-nowrap">Job Title : {jobtitle}</div>
 						</div>
 					</div>
 					<div className="d-flex my-3 justify-content-center align-items-center">
